@@ -1,0 +1,46 @@
+|DUT
+input_vector[0] => four_two_encoder:add_instance.EN
+input_vector[1] => four_two_encoder:add_instance.D
+input_vector[2] => four_two_encoder:add_instance.C
+input_vector[3] => four_two_encoder:add_instance.B
+input_vector[4] => four_two_encoder:add_instance.A
+output_vector[0] <= four_two_encoder:add_instance.Y0
+output_vector[1] <= four_two_encoder:add_instance.Y1
+
+
+|DUT|four_two_encoder:add_instance
+a => OR_2:g1.A
+a => OR_2:g2.A
+b => OR_2:g1.B
+c => OR_2:g2.B
+d => ~NO_FANOUT~
+en => AND_2:g3.B
+en => AND_2:g4.B
+y0 <= AND_2:g4.Y
+y1 <= AND_2:g3.Y
+
+
+|DUT|four_two_encoder:add_instance|OR_2:g1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|four_two_encoder:add_instance|OR_2:g2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|four_two_encoder:add_instance|AND_2:g3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|four_two_encoder:add_instance|AND_2:g4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

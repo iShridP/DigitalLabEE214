@@ -1,0 +1,607 @@
+|DUT
+input_vector[0] => divisibility:add_instance.X[0]
+input_vector[1] => divisibility:add_instance.X[1]
+input_vector[2] => divisibility:add_instance.X[2]
+input_vector[3] => divisibility:add_instance.X[3]
+input_vector[4] => divisibility:add_instance.X[4]
+input_vector[5] => divisibility:add_instance.F
+output_vector[0] << divisibility:add_instance.Y
+
+
+|DUT|divisibility:add_instance
+F => mux_2_1:g14.S_m
+X[0] => mux_2_1:g9.S_m
+X[0] => mux_2_1:g13.S_m
+X[1] => mux_4_1:g7.S_2_m
+X[1] => mux_4_1:g8.S_2_m
+X[1] => mux_4_1:g11.S_2_m
+X[1] => mux_4_1:g12.S_2_m
+X[2] => mux_4_1:g7.S_1_m
+X[2] => mux_4_1:g8.S_1_m
+X[2] => mux_4_1:g11.S_1_m
+X[2] => mux_4_1:g12.S_1_m
+X[3] => inverter:g2.A
+X[3] => and_2:g3.B
+X[3] => and_2:g5.B
+X[3] => mux_2_1:g10.S_m
+X[4] => inverter:g1.A
+X[4] => and_2:g3.A
+X[4] => and_2:g4.A
+X[4] => mux_2_1:g10.B_m
+Y <= mux_2_1:g14.O_m
+
+
+|DUT|divisibility:add_instance|INVERTER:g1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|INVERTER:g2
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|AND_2:g3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|AND_2:g4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|AND_2:g5
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|AND_2:g6
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g7
+A_4m => mux_2_1:g1.A_m
+B_4m => mux_2_1:g1.B_m
+C_4m => mux_2_1:g2.A_m
+D_4m => mux_2_1:g2.B_m
+S_1_m => mux_2_1:g3.S_m
+S_2_m => mux_2_1:g1.S_m
+S_2_m => mux_2_1:g2.S_m
+O_4m <= mux_2_1:g3.O_m
+
+
+|DUT|divisibility:add_instance|mux_4_1:g7|mux_2_1:g1
+A_m => and_2:g2.A
+B_m => and_2:g3.A
+S_m => inverter:g1.A
+S_m => and_2:g3.B
+O_m <= or_2:g4.Y
+
+
+|DUT|divisibility:add_instance|mux_4_1:g7|mux_2_1:g1|INVERTER:g1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g7|mux_2_1:g1|AND_2:g2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g7|mux_2_1:g1|AND_2:g3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g7|mux_2_1:g1|OR_2:g4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g7|mux_2_1:g2
+A_m => and_2:g2.A
+B_m => and_2:g3.A
+S_m => inverter:g1.A
+S_m => and_2:g3.B
+O_m <= or_2:g4.Y
+
+
+|DUT|divisibility:add_instance|mux_4_1:g7|mux_2_1:g2|INVERTER:g1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g7|mux_2_1:g2|AND_2:g2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g7|mux_2_1:g2|AND_2:g3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g7|mux_2_1:g2|OR_2:g4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g7|mux_2_1:g3
+A_m => and_2:g2.A
+B_m => and_2:g3.A
+S_m => inverter:g1.A
+S_m => and_2:g3.B
+O_m <= or_2:g4.Y
+
+
+|DUT|divisibility:add_instance|mux_4_1:g7|mux_2_1:g3|INVERTER:g1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g7|mux_2_1:g3|AND_2:g2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g7|mux_2_1:g3|AND_2:g3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g7|mux_2_1:g3|OR_2:g4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g8
+A_4m => mux_2_1:g1.A_m
+B_4m => mux_2_1:g1.B_m
+C_4m => mux_2_1:g2.A_m
+D_4m => mux_2_1:g2.B_m
+S_1_m => mux_2_1:g3.S_m
+S_2_m => mux_2_1:g1.S_m
+S_2_m => mux_2_1:g2.S_m
+O_4m <= mux_2_1:g3.O_m
+
+
+|DUT|divisibility:add_instance|mux_4_1:g8|mux_2_1:g1
+A_m => and_2:g2.A
+B_m => and_2:g3.A
+S_m => inverter:g1.A
+S_m => and_2:g3.B
+O_m <= or_2:g4.Y
+
+
+|DUT|divisibility:add_instance|mux_4_1:g8|mux_2_1:g1|INVERTER:g1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g8|mux_2_1:g1|AND_2:g2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g8|mux_2_1:g1|AND_2:g3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g8|mux_2_1:g1|OR_2:g4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g8|mux_2_1:g2
+A_m => and_2:g2.A
+B_m => and_2:g3.A
+S_m => inverter:g1.A
+S_m => and_2:g3.B
+O_m <= or_2:g4.Y
+
+
+|DUT|divisibility:add_instance|mux_4_1:g8|mux_2_1:g2|INVERTER:g1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g8|mux_2_1:g2|AND_2:g2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g8|mux_2_1:g2|AND_2:g3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g8|mux_2_1:g2|OR_2:g4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g8|mux_2_1:g3
+A_m => and_2:g2.A
+B_m => and_2:g3.A
+S_m => inverter:g1.A
+S_m => and_2:g3.B
+O_m <= or_2:g4.Y
+
+
+|DUT|divisibility:add_instance|mux_4_1:g8|mux_2_1:g3|INVERTER:g1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g8|mux_2_1:g3|AND_2:g2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g8|mux_2_1:g3|AND_2:g3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g8|mux_2_1:g3|OR_2:g4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_2_1:g9
+A_m => and_2:g2.A
+B_m => and_2:g3.A
+S_m => inverter:g1.A
+S_m => and_2:g3.B
+O_m <= or_2:g4.Y
+
+
+|DUT|divisibility:add_instance|mux_2_1:g9|INVERTER:g1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_2_1:g9|AND_2:g2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_2_1:g9|AND_2:g3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_2_1:g9|OR_2:g4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_2_1:g10
+A_m => and_2:g2.A
+B_m => and_2:g3.A
+S_m => inverter:g1.A
+S_m => and_2:g3.B
+O_m <= or_2:g4.Y
+
+
+|DUT|divisibility:add_instance|mux_2_1:g10|INVERTER:g1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_2_1:g10|AND_2:g2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_2_1:g10|AND_2:g3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_2_1:g10|OR_2:g4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g11
+A_4m => mux_2_1:g1.A_m
+B_4m => mux_2_1:g1.B_m
+C_4m => mux_2_1:g2.A_m
+D_4m => mux_2_1:g2.B_m
+S_1_m => mux_2_1:g3.S_m
+S_2_m => mux_2_1:g1.S_m
+S_2_m => mux_2_1:g2.S_m
+O_4m <= mux_2_1:g3.O_m
+
+
+|DUT|divisibility:add_instance|mux_4_1:g11|mux_2_1:g1
+A_m => and_2:g2.A
+B_m => and_2:g3.A
+S_m => inverter:g1.A
+S_m => and_2:g3.B
+O_m <= or_2:g4.Y
+
+
+|DUT|divisibility:add_instance|mux_4_1:g11|mux_2_1:g1|INVERTER:g1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g11|mux_2_1:g1|AND_2:g2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g11|mux_2_1:g1|AND_2:g3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g11|mux_2_1:g1|OR_2:g4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g11|mux_2_1:g2
+A_m => and_2:g2.A
+B_m => and_2:g3.A
+S_m => inverter:g1.A
+S_m => and_2:g3.B
+O_m <= or_2:g4.Y
+
+
+|DUT|divisibility:add_instance|mux_4_1:g11|mux_2_1:g2|INVERTER:g1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g11|mux_2_1:g2|AND_2:g2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g11|mux_2_1:g2|AND_2:g3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g11|mux_2_1:g2|OR_2:g4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g11|mux_2_1:g3
+A_m => and_2:g2.A
+B_m => and_2:g3.A
+S_m => inverter:g1.A
+S_m => and_2:g3.B
+O_m <= or_2:g4.Y
+
+
+|DUT|divisibility:add_instance|mux_4_1:g11|mux_2_1:g3|INVERTER:g1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g11|mux_2_1:g3|AND_2:g2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g11|mux_2_1:g3|AND_2:g3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g11|mux_2_1:g3|OR_2:g4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g12
+A_4m => mux_2_1:g1.A_m
+B_4m => mux_2_1:g1.B_m
+C_4m => mux_2_1:g2.A_m
+D_4m => mux_2_1:g2.B_m
+S_1_m => mux_2_1:g3.S_m
+S_2_m => mux_2_1:g1.S_m
+S_2_m => mux_2_1:g2.S_m
+O_4m <= mux_2_1:g3.O_m
+
+
+|DUT|divisibility:add_instance|mux_4_1:g12|mux_2_1:g1
+A_m => and_2:g2.A
+B_m => and_2:g3.A
+S_m => inverter:g1.A
+S_m => and_2:g3.B
+O_m <= or_2:g4.Y
+
+
+|DUT|divisibility:add_instance|mux_4_1:g12|mux_2_1:g1|INVERTER:g1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g12|mux_2_1:g1|AND_2:g2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g12|mux_2_1:g1|AND_2:g3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g12|mux_2_1:g1|OR_2:g4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g12|mux_2_1:g2
+A_m => and_2:g2.A
+B_m => and_2:g3.A
+S_m => inverter:g1.A
+S_m => and_2:g3.B
+O_m <= or_2:g4.Y
+
+
+|DUT|divisibility:add_instance|mux_4_1:g12|mux_2_1:g2|INVERTER:g1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g12|mux_2_1:g2|AND_2:g2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g12|mux_2_1:g2|AND_2:g3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g12|mux_2_1:g2|OR_2:g4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g12|mux_2_1:g3
+A_m => and_2:g2.A
+B_m => and_2:g3.A
+S_m => inverter:g1.A
+S_m => and_2:g3.B
+O_m <= or_2:g4.Y
+
+
+|DUT|divisibility:add_instance|mux_4_1:g12|mux_2_1:g3|INVERTER:g1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g12|mux_2_1:g3|AND_2:g2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g12|mux_2_1:g3|AND_2:g3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_4_1:g12|mux_2_1:g3|OR_2:g4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_2_1:g13
+A_m => and_2:g2.A
+B_m => and_2:g3.A
+S_m => inverter:g1.A
+S_m => and_2:g3.B
+O_m <= or_2:g4.Y
+
+
+|DUT|divisibility:add_instance|mux_2_1:g13|INVERTER:g1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_2_1:g13|AND_2:g2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_2_1:g13|AND_2:g3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_2_1:g13|OR_2:g4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_2_1:g14
+A_m => and_2:g2.A
+B_m => and_2:g3.A
+S_m => inverter:g1.A
+S_m => and_2:g3.B
+O_m <= or_2:g4.Y
+
+
+|DUT|divisibility:add_instance|mux_2_1:g14|INVERTER:g1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_2_1:g14|AND_2:g2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_2_1:g14|AND_2:g3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|divisibility:add_instance|mux_2_1:g14|OR_2:g4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

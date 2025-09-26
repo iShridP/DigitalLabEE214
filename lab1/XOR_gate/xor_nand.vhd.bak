@@ -1,0 +1,18 @@
+library ieee;
+use ieee.std_logic_1164.all;
+library work;
+use work.Gates.all;
+
+entity xor_nand is
+port(a,b : in std_logic; output : out std_logic);
+end xor_nand;
+
+architecture struct of xor_and is
+signal not_a, not_b, nand_o, nand_t : std_logic;
+begin 
+g1: NAND_2 port map (a,a,not_a);
+g2: NAND_2 port map (b,b,not_b);
+g3: NAND_2 port map (a,not_b,nand_o);
+g4: NAND_2 port map (not_a,b,nand_t);
+g5: NAND_2 port map (nand_o, nand_t, output);
+end struct;

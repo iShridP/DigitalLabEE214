@@ -1,0 +1,29 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+entity alu_beh is
+port (
+S : in std_logic_vector(1 downto 0);
+A : in std_logic_vector(3 downto 0);
+B : in std_logic_vector(3 downto 0);
+Y : out std_logic_vector(7 downto 0)
+);
+end entity;
+architecture arch of alu_beh is
+function Shift(A, B : std_logic_vector(3 downto 0)) return std_logic_vector is
+-- declaring and initializing variables using aggregates
+variable A_extended : std_logic_vector(...) := (others => '0'); -- extend A to 8 bits
+variable shift_amount : integer := to_integer(unsigned(B(...))); -- define shift amount
+variable result : std_logic_vector(...); --return result
+begin
+--use behavioral modeling to do shift operation
+end;
+begin
+-- complete VHDL code for various outputs of ALU based on select lines
+-- Hint: use if/else statement
+--
+-- function usage :
+-- signal_name <= shift(A,B)
+-- variable_name := shift(A,B)
+end process;
+end architecture;

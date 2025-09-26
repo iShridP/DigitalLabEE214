@@ -1,0 +1,24 @@
+|DUT
+input_vector[0] => nand_gate:add_instance.A
+input_vector[1] => nand_gate:add_instance.B
+output_vector[0] <= nand_gate:add_instance.OUTPUT
+
+
+|DUT|nand_gate:add_instance
+a => NAND_2:g1.A
+b => NAND_2:g1.B
+output <= NAND_2:g2.Y
+
+
+|DUT|nand_gate:add_instance|NAND_2:g1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|nand_gate:add_instance|NAND_2:g2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

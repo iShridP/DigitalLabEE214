@@ -1,0 +1,155 @@
+|DUT
+input_vector[0] => hamming_weight:add_instance.X0
+input_vector[1] => hamming_weight:add_instance.X1
+input_vector[2] => hamming_weight:add_instance.X2
+input_vector[3] => hamming_weight:add_instance.X3
+input_vector[4] => hamming_weight:add_instance.X4
+output_vector[0] << hamming_weight:add_instance.Y
+
+
+|DUT|hamming_weight:add_instance
+x4 => XOR_2:g1.B
+x4 => AND_2:g14.B
+x4 => INVERTER:g16.A
+x3 => XOR_2:g2.B
+x3 => XOR_2:g5.B
+x3 => XOR_2:g10.B
+x3 => AND_2:g18.B
+x2 => XOR_2:g2.A
+x2 => INVERTER:g6.A
+x2 => AND_2:g12.B
+x2 => AND_2:g19.B
+x1 => XOR_2:g1.A
+x1 => AND_2:g7.B
+x1 => XOR_2:g10.A
+x1 => XOR_2:g15.B
+x0 => AND_2:g4.B
+x0 => XOR_2:g5.A
+x0 => INVERTER:g9.A
+x0 => XOR_2:g15.A
+y <= OR_2:g21.Y
+
+
+|DUT|hamming_weight:add_instance|XOR_2:g1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|hamming_weight:add_instance|XOR_2:g2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|hamming_weight:add_instance|AND_2:g3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|hamming_weight:add_instance|AND_2:g4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|hamming_weight:add_instance|XOR_2:g5
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|hamming_weight:add_instance|INVERTER:g6
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|hamming_weight:add_instance|AND_2:g7
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|hamming_weight:add_instance|AND_2:g8
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|hamming_weight:add_instance|INVERTER:g9
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|hamming_weight:add_instance|XOR_2:g10
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|hamming_weight:add_instance|AND_2:g11
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|hamming_weight:add_instance|AND_2:g12
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|hamming_weight:add_instance|OR_2:g13
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|hamming_weight:add_instance|AND_2:g14
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|hamming_weight:add_instance|XOR_2:g15
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|hamming_weight:add_instance|INVERTER:g16
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|hamming_weight:add_instance|AND_2:g17
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|hamming_weight:add_instance|AND_2:g18
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|hamming_weight:add_instance|AND_2:g19
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|hamming_weight:add_instance|OR_2:g20
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|hamming_weight:add_instance|OR_2:g21
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,32 @@
+|DUT
+input_vector[0] => nor_and:add_instance.A
+input_vector[1] => nor_and:add_instance.B
+output_vector[0] <= nor_and:add_instance.OUTPUT
+
+
+|DUT|nor_and:add_instance
+a => NOR_2:g1.A
+a => NOR_2:g1.B
+b => NOR_2:g2.A
+b => NOR_2:g2.B
+output <= NOR_2:g3.Y
+
+
+|DUT|nor_and:add_instance|NOR_2:g1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|nor_and:add_instance|NOR_2:g2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|nor_and:add_instance|NOR_2:g3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

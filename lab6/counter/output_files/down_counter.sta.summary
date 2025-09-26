@@ -1,0 +1,113 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'input_vector[1]'
+Slack : -1.059
+TNS   : -1.059
+
+Type  : Slow 1200mV 85C Model Setup 'down_counter:add_instance|D_flip_flop:g1|Q_int'
+Slack : -0.629
+TNS   : -0.629
+
+Type  : Slow 1200mV 85C Model Setup 'down_counter:add_instance|D_flip_flop:g2|Q_int'
+Slack : 0.261
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'down_counter:add_instance|D_flip_flop:g2|Q_int'
+Slack : 0.412
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'down_counter:add_instance|D_flip_flop:g1|Q_int'
+Slack : 0.864
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'input_vector[1]'
+Slack : 0.908
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'input_vector[1]'
+Slack : -3.000
+TNS   : -4.487
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'down_counter:add_instance|D_flip_flop:g1|Q_int'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'down_counter:add_instance|D_flip_flop:g2|Q_int'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Slow 1200mV 0C Model Setup 'input_vector[1]'
+Slack : -0.871
+TNS   : -0.871
+
+Type  : Slow 1200mV 0C Model Setup 'down_counter:add_instance|D_flip_flop:g1|Q_int'
+Slack : -0.612
+TNS   : -0.612
+
+Type  : Slow 1200mV 0C Model Setup 'down_counter:add_instance|D_flip_flop:g2|Q_int'
+Slack : 0.334
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'down_counter:add_instance|D_flip_flop:g2|Q_int'
+Slack : 0.368
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'input_vector[1]'
+Slack : 0.807
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'down_counter:add_instance|D_flip_flop:g1|Q_int'
+Slack : 0.837
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'input_vector[1]'
+Slack : -3.000
+TNS   : -4.487
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'down_counter:add_instance|D_flip_flop:g1|Q_int'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'down_counter:add_instance|D_flip_flop:g2|Q_int'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Fast 1200mV 0C Model Setup 'input_vector[1]'
+Slack : -0.260
+TNS   : -0.260
+
+Type  : Fast 1200mV 0C Model Setup 'down_counter:add_instance|D_flip_flop:g1|Q_int'
+Slack : 0.157
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'down_counter:add_instance|D_flip_flop:g2|Q_int'
+Slack : 0.693
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'down_counter:add_instance|D_flip_flop:g2|Q_int'
+Slack : 0.169
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'down_counter:add_instance|D_flip_flop:g1|Q_int'
+Slack : 0.236
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'input_vector[1]'
+Slack : 0.502
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'input_vector[1]'
+Slack : -3.000
+TNS   : -4.071
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'down_counter:add_instance|D_flip_flop:g1|Q_int'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'down_counter:add_instance|D_flip_flop:g2|Q_int'
+Slack : -1.000
+TNS   : -1.000
+
+------------------------------------------------------------

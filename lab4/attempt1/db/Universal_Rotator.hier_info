@@ -1,0 +1,410 @@
+|DUT
+input_vector[0] => Universal_Rotator:add_instance.A0
+input_vector[1] => Universal_Rotator:add_instance.A1
+input_vector[2] => Universal_Rotator:add_instance.A2
+input_vector[3] => Universal_Rotator:add_instance.A3
+input_vector[4] => Universal_Rotator:add_instance.A4
+input_vector[5] => Universal_Rotator:add_instance.A5
+input_vector[6] => Universal_Rotator:add_instance.A6
+input_vector[7] => Universal_Rotator:add_instance.A7
+input_vector[8] => Universal_Rotator:add_instance.B0
+input_vector[9] => Universal_Rotator:add_instance.B1
+input_vector[10] => Universal_Rotator:add_instance.B2
+input_vector[11] => Universal_Rotator:add_instance.L
+output_vector[0] <= Universal_Rotator:add_instance.S0
+output_vector[1] <= Universal_Rotator:add_instance.S1
+output_vector[2] <= Universal_Rotator:add_instance.S2
+output_vector[3] <= Universal_Rotator:add_instance.S3
+output_vector[4] <= Universal_Rotator:add_instance.S4
+output_vector[5] <= Universal_Rotator:add_instance.S5
+output_vector[6] <= Universal_Rotator:add_instance.S6
+output_vector[7] <= Universal_Rotator:add_instance.S7
+
+
+|DUT|universal_rotator:add_instance
+L => MUX_2_1:g1.S
+L => MUX_2_1:g2.S
+L => MUX_2_1:g3.S
+L => MUX_2_1:g4.S
+L => MUX_2_1:g5.S
+L => MUX_2_1:g6.S
+L => MUX_2_1:g7.S
+L => MUX_2_1:g8.S
+L => MUX_2_1:g33.S
+L => MUX_2_1:g34.S
+L => MUX_2_1:g35.S
+L => MUX_2_1:g36.S
+L => MUX_2_1:g37.S
+L => MUX_2_1:g38.S
+L => MUX_2_1:g39.S
+L => MUX_2_1:g40.S
+B2 => MUX_2_1:g9.S
+B2 => MUX_2_1:g10.S
+B2 => MUX_2_1:g11.S
+B2 => MUX_2_1:g12.S
+B2 => MUX_2_1:g13.S
+B2 => MUX_2_1:g14.S
+B2 => MUX_2_1:g15.S
+B2 => MUX_2_1:g16.S
+B1 => MUX_2_1:g17.S
+B1 => MUX_2_1:g18.S
+B1 => MUX_2_1:g19.S
+B1 => MUX_2_1:g20.S
+B1 => MUX_2_1:g21.S
+B1 => MUX_2_1:g22.S
+B1 => MUX_2_1:g23.S
+B1 => MUX_2_1:g24.S
+B0 => MUX_2_1:g25.S
+B0 => MUX_2_1:g26.S
+B0 => MUX_2_1:g27.S
+B0 => MUX_2_1:g28.S
+B0 => MUX_2_1:g29.S
+B0 => MUX_2_1:g30.S
+B0 => MUX_2_1:g31.S
+B0 => MUX_2_1:g32.S
+A7 => MUX_2_1:g1.A
+A7 => MUX_2_1:g8.B
+A6 => MUX_2_1:g2.A
+A6 => MUX_2_1:g7.B
+A5 => MUX_2_1:g3.A
+A5 => MUX_2_1:g6.B
+A4 => MUX_2_1:g4.A
+A4 => MUX_2_1:g5.B
+A3 => MUX_2_1:g4.B
+A3 => MUX_2_1:g5.A
+A2 => MUX_2_1:g3.B
+A2 => MUX_2_1:g6.A
+A1 => MUX_2_1:g2.B
+A1 => MUX_2_1:g7.A
+A0 => MUX_2_1:g1.B
+A0 => MUX_2_1:g8.A
+S7 <= MUX_2_1:g33.O
+S6 <= MUX_2_1:g34.O
+S5 <= MUX_2_1:g35.O
+S4 <= MUX_2_1:g36.O
+S3 <= MUX_2_1:g37.O
+S2 <= MUX_2_1:g38.O
+S1 <= MUX_2_1:g39.O
+S0 <= MUX_2_1:g40.O
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g1
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g2
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g3
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g4
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g5
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g6
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g7
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g8
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g9
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g10
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g11
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g12
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g13
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g14
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g15
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g16
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g17
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g18
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g19
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g20
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g21
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g22
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g23
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g24
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g25
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g26
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g27
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g28
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g29
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g30
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g31
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g32
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g33
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g34
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g35
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g36
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g37
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g38
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g39
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|universal_rotator:add_instance|MUX_2_1:g40
+A => O.IN0
+B => O.IN0
+S => O.IN1
+S => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+

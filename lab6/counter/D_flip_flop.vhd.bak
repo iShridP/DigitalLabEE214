@@ -1,0 +1,30 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity D_flip_flop is
+    Port (
+        clk   : in  STD_LOGIC;
+        set   : in  STD_LOGIC;
+        reset : in  STD_LOGIC;
+        D     : in  STD_LOGIC;
+        Q     : out STD_LOGIC;
+        Qbar  : out STD_LOGIC
+    );
+end D_flip_flop;
+
+architecture struct of DFF is
+    signal Q_int : STD_LOGIC := '0';
+begin
+    process(clk, reset, set) --whenever smthing here changes trigger the process
+    begin
+        if (reset = '1') then
+            Q_int <= '0'; -- force Q 0
+        elsif (set = '1') then
+            Q_int <= '1'; -- force Q 1
+        elsif rising_edge(clk) then
+            Q_int <= D; -- rising edge and set reset both 0 then set Q to D
+        end if;
+    end process;
+    Q    <= Q_int;
+    Qbar <= not Q_int;
+end struct;

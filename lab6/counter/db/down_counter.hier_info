@@ -1,0 +1,45 @@
+|DUT
+input_vector[0] => down_counter:add_instance.RES
+input_vector[1] => down_counter:add_instance.CLOCK
+output_vector[0] <= down_counter:add_instance.Q_A
+output_vector[1] <= down_counter:add_instance.Q_B
+output_vector[2] <= down_counter:add_instance.Q_C
+
+
+|DUT|down_counter:add_instance
+clock => d_flip_flop:g1.clk
+res => d_flip_flop:g1.reset
+res => d_flip_flop:g2.reset
+res => d_flip_flop:g3.reset
+Q_c <= d_flip_flop:g3.Q
+Q_b <= d_flip_flop:g2.Q
+Q_a <= d_flip_flop:g1.Q
+
+
+|DUT|down_counter:add_instance|D_flip_flop:g1
+clk => Q_int.CLK
+set => Q_int.IN0
+reset => Q_int.IN1
+D => Q_int.DATAIN
+Q <= Q_int.DB_MAX_OUTPUT_PORT_TYPE
+Qbar <= Q_int.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|down_counter:add_instance|D_flip_flop:g2
+clk => Q_int.CLK
+set => Q_int.IN0
+reset => Q_int.IN1
+D => Q_int.DATAIN
+Q <= Q_int.DB_MAX_OUTPUT_PORT_TYPE
+Qbar <= Q_int.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|down_counter:add_instance|D_flip_flop:g3
+clk => Q_int.CLK
+set => Q_int.IN0
+reset => Q_int.IN1
+D => Q_int.DATAIN
+Q <= Q_int.DB_MAX_OUTPUT_PORT_TYPE
+Qbar <= Q_int.DB_MAX_OUTPUT_PORT_TYPE
+
+

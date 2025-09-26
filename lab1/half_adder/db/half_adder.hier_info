@@ -1,0 +1,34 @@
+|DUT
+input_vector[0] => half_adder:add_instance.A
+input_vector[1] => half_adder:add_instance.B
+output_vector[0] << half_adder:add_instance.CARRY
+output_vector[1] << half_adder:add_instance.SUM
+
+
+|DUT|half_adder:add_instance
+a => XOR_2:g1.A
+a => NAND_2:g2.A
+b => XOR_2:g1.B
+b => NAND_2:g2.B
+sum <= XOR_2:g1.Y
+carry <= NAND_2:g3.Y
+
+
+|DUT|half_adder:add_instance|XOR_2:g1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|half_adder:add_instance|NAND_2:g2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|half_adder:add_instance|NAND_2:g3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
